@@ -446,7 +446,7 @@ main {
         }
     }
     .testimonials{
-
+          margin-bottom: 128px;
         .testimonials__wrapper{
             background-color: $light-yellow;
             padding: 92px 112px;
@@ -475,6 +475,7 @@ main {
                 background-color: $main-dark-color;
             }
             .testimonials__paragraph{
+                width: 600px;
                 .paragraph{
                     width: 450px;
                     @include font("dark", 24px, 700, 32px, -spacing);
@@ -482,14 +483,130 @@ main {
                 }
                 .user{
                     display: flex;
+                    justify-content: flex-end;
                     gap: 16px;
-                    h3{
-                        @include font("dark", 24px, 700, 32px, -spacing)
+                    .user-title{
+                        // width: 257px;
+                        h3{
+                            @include font("dark", 24px, 700, 32px, -spacing)
+                        }
+                        p{
+                            @include font("secondary", 16px, 400, 28px, -spacing)
+                        }
                     }
-                    p{
-                        @include font("secondary", 16px, 400, 28px, -spacing)
+          
+                    .arrows{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 24px;
+                        padding-left: 90px;
+                        i{
+                            background-color: #fff;
+                            width: 62px;
+                            height: 62px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            transition: 0.5s;
+                        }
+                        i:hover{
+                            transform: scale(1.1);
+                            background-color: $main-dark-color;
+                            color: $gray-light;
+                        }
                     }
                 }
+              
+            }
+        }
+    }
+    .story{
+        margin-bottom: 128px;
+        .story__wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .story__title{
+               width: 414px;
+               h2{
+                @include font("dark", 36px, 700, 48px, -1px);
+                text-align: center;
+               }
+               p{
+                @include font("secondary", 16px, 400, 28px, -spacing);
+                text-align: center;
+                margin: 16px 0 32px;
+               }
+               .btn__wrapper{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $main-dark-color;
+    .footer__wrapper{
+        width: 100%;
+        max-width: 1280px;
+        .menu__wrapper{
+            width: 100%;
+            max-width: 1280px;
+            padding: 59px 0px 56px;
+            display: flex;
+            justify-content: space-between; 
+            margin-bottom: 56px;
+            ul{
+                list-style: none;
+                display: flex;
+                gap: 24px;
+                a{
+                    @include font("light", 16px, 400, 28px, -spacing);
+                    text-decoration: none;
+                }
+            }
+        }
+        .input__wrapper{
+            display: flex;
+            align-items: center;
+            gap: 64px;
+            background-color: #2e3040;
+            padding: 84px 64px;
+            .i__title{
+                @include font("light", 36px, 700, 48px, -2px);
+                width: 700px;
+            }
+            .i__content{
+                display: flex;
+                gap: 20px;
+                input{
+                    width: 323px;
+                    padding: 14px 24px;
+                    background: none;
+                    outline: none;
+                    border: 1px solid #4c4c4c;
+                }
+            }
+        }
+        .socials__wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+            .socials__text{
+                p{
+                    @include font("", 16px, 400, 28px, -spacing);
+                    color: #6D6E76;
+                }
+            }
+            .socials__icon{
+                display: flex;
+                gap: 27px;
             }
         }
     }
