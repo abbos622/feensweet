@@ -1,0 +1,107 @@
+.about__img{
+    margin-top: 380px;
+}
+.about__wrapper{
+    position: relative;
+    img{
+        width: 100%;
+    }
+}
+.about__content{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: absolute;
+    top: 80px;
+    left: 89px;
+    z-index: 3;
+}
+.about__title>p{
+    @include font($f-family: "Inter",$f-size:16px,$f-color:#232536,$f-weight:500,$f-height:20px);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: left;
+}
+.about__title>h1{
+    width: 496px;
+    @include font($f-family: "Sen",$f-size:48px,$f-color:#232536,$f-weight:700,$f-height:64px);
+    letter-spacing: -2px;
+}
+.about__title{
+    background-color: #fff;
+    width: 624px;
+    height: 356px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 64px;
+    justify-content: center;
+}
+.about__text > p{
+    width: 477px;
+    @include font($f-family: "Sen",$f-size:16px,$f-color:#4C4C4C,$f-weight:400,$f-height:28px);
+}
+.about__info{
+    width: 100%;
+    height: 446px;
+    background-color: #F4F0F8;
+    margin-top: -5px;
+    padding: 128px 109px;
+}
+.part1__title{
+    @include font($f-family: "Inter",$f-size:16px,$f-color:#232536,$f-weight:600,$f-height:20px);
+    letter-spacing: 3px; 
+}
+.part1__text{
+    width: 470px;
+    @include font($f-family: "Inter",$f-size:28px,$f-color:#232536,$f-weight:700,$f-height:40px);
+    letter-spacing: -1px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+.part1__content{
+    @include font($f-family: "Sen",$f-size:16px,$f-color:#4C4C4C,$f-weight:400,$f-height:28px);
+    width: 516px;
+}
+.info__wrapper{
+    display: flex;
+    gap:32px
+}
+.about__box{
+    position: absolute;
+    top: 628px;
+    left: 109px;
+    .main__box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 630px;
+        height: 156px;
+        background-color: rgba(255, 208, 80, 1);
+        .box__info{
+            display: flex;
+            gap: 68px;
+            .box__item{
+                .num{
+                    @include font($f-family: "Sen",$f-size:56px,$f-color:#232536,$f-weight:700,$f-height:64px);
+                    letter-spacing: -2px;
+                }
+                .box__text{
+                    @include font($f-family: "Inter",$f-size:16px,$f-color:#232536,$f-weight:400,$f-height:28px);
+                }
+            }
+        }
+    }
+    .small__box{
+        display: flex;
+        .purple__box{
+            width: 311px;
+            height: 23px;
+            background-color: #592EA9;
+        }
+        .yellow__box{
+            width: 550px;
+            height: 23px;
+            background-color: rgba(255, 208, 80, 1);
+        }
+    }
+}

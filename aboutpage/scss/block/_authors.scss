@@ -1,0 +1,63 @@
+.authors__title{
+    @include font($f-color:#232536,$f-family: "Sen",$f-size:36px,$f-weight:700,$f-height:48px);
+    letter-spacing: -2px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.authors__list{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4,296px);
+    grid-template-rows: repeat(2,324px);
+    gap: 32px 32px;
+    margin-bottom: 128px;
+    .authors__item{
+        background-color: #F4F4F4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .author__name{
+            @include font($f-color:#232536,$f-family: "Sen",$f-size:28px,$f-weight:700,$f-height:40px);
+            letter-spacing: -1px;
+            margin-top: 20px;
+        }
+        .author__position{
+            @include font($f-color:#6D6E76,$f-family:"Inter",$f-size:14px,$f-weight:400,$f-height:20px);
+            margin-bottom: 20px;
+        }
+        .logoes{
+            display: flex;
+            gap:16px;
+        }
+    }
+    .authors__item:hover{
+        background-color: #FBF6EA;
+        transition: 1s;
+    }
+}
+.authors__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.join{
+    @include font($f-color:#232536,$f-family: "Sen",$f-size:28px,$f-weight:700,$f-height:40px);
+    width: 414px;
+    text-align: center;
+}
+.join__text{
+    @include font($f-color:#6D6E76,$f-family:"Inter",$f-size:14px,$f-weight:400,$f-height:20px);
+    width: 405px;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+.join__btn{
+    border: none;
+    padding: 16px 48px;
+    background-color: rgba(255, 208, 80, 1);
+    @include font($f-color:#232536,$f-family: "Sen",$f-size:18px,$f-weight:700,$f-height:24px);
+    margin-bottom: 128px;
+}

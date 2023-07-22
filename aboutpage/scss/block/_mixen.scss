@@ -1,0 +1,8 @@
+@mixin font($f-color:#fff,$f-family:"Inter",$f-size:16px,$f-style:normal,$f-weight:400,$f-height:28px){
+    color: $f-color;
+    font-family: $f-family;
+    font-size: $f-size;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    line-height: $f-height;
+}

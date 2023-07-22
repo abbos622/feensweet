@@ -1,0 +1,69 @@
+footer{
+    width: 100%;
+    height: 560px;
+    background-color: rgba(35, 37, 54, 1);
+    padding: 59px 80px;
+}
+.footer__menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 57px;
+}
+.footer__list{
+    display: flex;
+    gap: 24px;
+    .footer__item{
+        a{
+            text-decoration: none;
+            @include font();
+        }
+    }
+}
+.subscribe{
+    width: 100%;
+    height: 256px;
+    background-color: rgb(255, 255, 255,0.05);
+    padding: 80px 64px;
+    display: flex;
+    gap: 64px;
+    align-items: center;
+}
+.subscribe__text{
+    @include font($f-size:36px,$f-family:"Sen",$f-weight:700,$f-height:48px);
+    letter-spacing: -2px;
+    width: 562px;
+}
+.sub__input{
+    display: flex;
+    gap: 24px;
+}
+.sub__btn{
+    border: none;
+    padding: 16px 48px;
+    background-color: rgba(255, 208, 80, 1);
+    @include font($f-color:#232536,$f-family: "Sen",$f-size:18px,$f-weight:700,$f-height:24px);
+}
+.sub__inp{
+    text-indent: 25px;
+    border: 1px solid #4C4C4C;
+    width: 323px;
+    height: 56px;
+    background-color: #ffffff00;
+}
+.sub__inp::placeholder{
+    @include font($f-color:#6D6E76,$f-family: "Inter",$f-size:16px,$f-weight:400,$f-height:28px);
+}
+.footer__end{
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.end__text p{
+    @include font($f-color:#FFF,$f-family: "Inter",$f-size:16px,$f-weight:400,$f-height:28px);
+}
+.end__logo{
+    display: flex;
+    gap: 27px;
+}

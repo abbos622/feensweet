@@ -1,0 +1,43 @@
+.activites{
+    margin-top: 128px;
+    margin-bottom: 128px;
+}
+.active__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+    .active__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .active__one,.active__two{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .content__title{
+        @include font($f-family:"Sen",$f-color:#232536,$f-size:36px,$f-weight:700,$f-height:48px);
+        letter-spacing: -2px;
+    }
+    .content__text{
+        @include font($f-family:"Sen",$f-color:#232536,$f-size:24px,$f-weight:700,$f-height:32px);
+        margin-top: 16px;
+        margin-bottom: 16px;
+        width: 519px;
+    }
+    .content__info{
+        @include font($f-family:"Inter",$f-color:#232536,$f-size:16px,$f-weight:400,$f-height:28px);
+        width: 519px;
+    }
+    .shape1{
+        position: absolute;
+        top: 114px;
+        right: 578px;
+    }
+    .shape2{
+        position: absolute;
+        bottom: -35px;
+        left: 107px;
+    }
+}
