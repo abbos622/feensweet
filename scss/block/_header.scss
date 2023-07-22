@@ -1,0 +1,210 @@
+// @import 'mixin.scss';
+
+$main-dark-color: #232536;
+$main-light-color: #fff;
+$secondary-dark-color: #4C4C4C;
+$secondary-light-color: #6D6E76;
+$warning-light-color: #FFD050;
+$warning-dark-color: #EDC14A;
+$primary-color: #592EA9;
+$light-color: #F4F0F8;
+$light-yellow: #FBF6EA;
+$gray-light: #F4F4F4;
+
+@mixin font($color, $f-size, $f-weight, $l-height, $l-spacing) {
+    @if $color =="light" {
+        color: #fff;
+    }
+
+    @else if $color =="dark" {
+        color: #232536;
+    }
+
+    @else if $color =="secondary" {
+        color: #AFB0B9;
+    }
+
+    @else {
+        color: #000;
+    }
+
+    font-family:'Inter',
+    sans-serif;
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $l-height;
+    letter-spacing: $l-spacing;
+    color: $color;
+}
+
+@mixin button($padding, $bg-color, $border) {
+    @if $bg-color =="dark-yellow" {
+        background-color: $warning-dark-color;
+        color: $main-dark-color;
+    }
+
+    @else if $bg-color =="light-yellow" {
+        background-color: $warning-light-color;
+        color: $main-dark-color;
+    }
+
+    @else if $bg-color =="light" {
+        background-color: $main-light-color;
+        color: $main-dark-color;
+    }
+
+    padding: $padding;
+    border: $border;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1282px;
+    margin: 0 auto;
+    // padding: 0px 20px;
+}
+
+.btn {
+    @include button(16px 48px, "light-yellow", none);
+    @include font("dark", 18px, 700, 24px, -spacing);
+    transition: 0.2s;
+}
+
+.btn:hover {
+    @include button(16px 48px, "dark-yellow", none);
+
+}
+
+
+header {
+    width: 100%;
+
+    nav {
+        background-color: $main-dark-color;
+
+        .nav__wrapper {
+            display: flex;
+            // justify-content: space-between;
+            align-items: center;
+            // width: 1200px;
+            height: 80px;
+
+            .logo {
+                display: flex;
+                flex-grow: 1;
+            }
+
+            .nav__menu {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                gap: 24px;
+
+                a {
+                    @include font("light", 16px, 400, 28px, -spacing);
+                    text-decoration: none;
+                }
+            }
+
+            button {
+                margin-left: 32px;
+                @include button(16px 48px, "light", 1px solid $main-dark-color);
+                @include font("dark", 18px, 700, 24px, -spacing)
+            }
+        }
+    }
+
+    .banner {
+        background-image: url("/images/png/banner-bg.png");
+        background-repeat: no-repeat;
+        background-position: calc(100%) calc(0%);
+        background-size: 100%;
+        // padding-bottom: 120px;
+        // height: 720px;
+        position: relative;
+
+        .banner__wrapper {
+            .banner-title {
+                height: 720px;
+                padding-top: 128px;
+                padding-bottom: 192px;
+
+                strong {
+                    @include font("light", 16px, 900, -height, -spacing);
+                }
+
+                h1 {
+                    @include font("light", 56px, 700, 64px, -2px);
+                    width: 803px;
+                    margin: 24px 0;
+                }
+
+                .date {
+                    @include font("light", 16px, 400, 28px, -spacing);
+                    margin-bottom: 16px;
+
+                    span {
+                        color: $warning-light-color;
+                    }
+                }
+
+                .banner-text {
+                    width: 599px;
+                    padding-bottom: 48px;
+                    @include font("light", 16px, 400, -28px, -spacing);
+                }
+
+            }
+        }
+    }
+
+
+}
+
+main {
+    .posts {
+        .posts__wrapper {
+            h2 {
+                @include font("dark", 36px, 700, 48px, -1px);
+                margin-bottom: 32px;
+                width: 50%;
+            }
+
+            .post__wrapper {
+                display: flex;
+                .post-title{
+                    display: flex;
+                }
+                .feature-post {
+                    padding: 32px;
+                    width: 733px;
+                    height: 724px;
+                    border: 1px solid $secondary-light-color;
+                   .post__date{
+                    @include font("secondary", 14px, 500, 20px, -spacing);
+                    margin: 32px 0 16px;
+                   }
+                   .post__head{
+                    @include font("dark", 28px, 700, 40px, -spacing);
+                    margin: 16px 0;
+                   }
+                   .post__text{
+                    @include font("secondary", 16px, 400, 28px, -spacing);
+                    margin-bottom: 32px;
+                   }
+                }
+                
+                .feature-post2{
+                   
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+$main-dark-color:#232536;
+$main-light-color:#fff;
+$secondary-dark-color:#4C4C4C;
+$secondary-light-color:#6D6E76;
+$warning-light-color:#FFD050;
+$warning-dark-color:#EDC14A;
+$primary-color:#592EA9;
+$light-color:#F4F0F8;
+$light-yellow:#FBF6EA;
+$gray-light:#F4F4F4;
+
+@mixin font($color,$f-size,$f-weight,$l-height,$l-spacing){
+    @if $color == "light"{
+        color: #fff;
+    }
+    @else if $color == "dark"{
+        color: #232536;
+    }
+    @else if $color == "secondary"{
+        color: #AFB0B9;
+    }
+    @else{
+        color: #000;
+    }
+    font-family:'Inter', sans-serif;
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $l-height;
+    letter-spacing: $l-spacing;
+    color: $color;
+}
+@mixin button($padding,$bg-color,$border){
+    @if $bg-color == "dark-yellow"{
+        background-color: $warning-dark-color;
+        color: $main-dark-color;
+    }
+    @else if $bg-color == "light-yellow"{
+        background-color: $warning-light-color;
+        color: $main-dark-color;
+    }
+    @else if $bg-color == "light"{
+     background-color: $main-light-color;
+     color: $main-dark-color;
+    }
+}
+
