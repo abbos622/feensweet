@@ -171,18 +171,35 @@ header {
 main {
     .posts {
         .posts__wrapper {
+            margin: 128px 0;
             h2 {
                 @include font("dark", 36px, 700, 48px, -1px);
-                margin-bottom: 32px;
+                // margin-bottom: 32px;
                 width: 50%;
             }
-
+            .post-title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                div{
+                    display: flex;
+                    width: 515px;
+                    align-items: center;
+                    justify-content: flex-end;
+                    a{
+                        width: 120px;
+                        margin-left: 300px;
+                        text-decoration: none;  
+                        @include font("", 16px, 400, 28px, -spacing);
+                        color: $primary-color;
+                    }
+                }
+            }
             .post__wrapper {
                 display: flex;
-                .post-title{
-                    display: flex;
-                }
+                
                 .feature-post {
+                    margin-top: 32px;
                     padding: 32px;
                     width: 733px;
                     height: 724px;
@@ -202,7 +219,276 @@ main {
                 }
                 
                 .feature-post2{
-                   
+                    margin-top: 32px;
+                    padding: 32px;
+                    width: 733px;
+                    height: 724px;
+                    .card{
+                        display: flex;
+                        flex-direction: column;
+                        // align-items: center;
+                        padding: 32px;
+                        justify-content: center;
+                        width: 517px;
+                        height: 181px;
+                        transition: 0.3s;
+                        strong{
+                            // text-align: left;
+                            display: flex;
+                            align-items: start;
+                            @include font("", 14px, 500, 20px, -spacing);
+                            span{
+                                color: $primary-color;
+                            }
+                        }
+                        p{
+                            width: 369px;
+                            @include font("dark", 24px, 700, 32px, -spacing)
+                        }
+                    }
+                    .card:hover{
+                        background-color: $light-yellow;
+                    }
+                }
+            }
+        }
+    }
+    .about{
+        margin-bottom: 128px;
+        .about__wrapper{
+            display: flex;
+            flex-direction: column;
+            .liners{
+                display: flex;
+                justify-content: flex-end;
+                .liner-y{
+                    width: 790px;
+                    height: 23px;
+                    background-color: $warning-light-color;
+                }
+                .liner-p{
+                    width: 282px;
+                    height: 23px;
+                    background-color: $primary-color;
+                }
+            }
+            .results{
+                background-color: $light-color;
+                height: 500px;
+                padding: 96px 80px;
+                display: flex;
+                gap: 82px;
+                .a-us{
+                    strong{
+                        @include font("dark", 16px, 600, 20px, 3px);
+                        text-transform: uppercase;
+                    }
+                    h2{
+                        @include font("dark", 36px, 700, 48px, -2px);
+                        width: 494px;
+                        margin-top: 24px;
+                    }
+                    p{
+                        @include font("secondary", 16px, 400, 28px, -spacing);
+                        width: 515px;
+                        margin: 16px 0;
+                    }
+                    a{
+                        text-decoration: none;
+                        @include font("", 18px, 700, 32px, -spacing);
+                        color: $primary-color;
+                    }
+                }
+                .our-mission{
+                    strong{
+                        @include font("dark", 16px, 600, 20px, 3px);
+                        text-transform: uppercase;
+                    }
+                    h2{
+                        @include font("dark", 28px, 700, 40px, -1px);
+                        width: 481px;
+                        margin-top: 24px;
+                    }
+                    p{
+                        @include font("secondary", 16px, 400, 28px, -spacing);
+                        width: 515px;
+                        margin: 16px 0;
+                    }
+                }
+            }
+        }
+    }
+    .category{
+        margin-bottom: 128px;
+        .category_wrapper{
+            .category-title{
+                h2{
+                    @include font("dark", 36px, 700, 48px, -2px);
+                    text-align: center;
+                    margin-bottom: 48px;
+                }
+            }
+            .category__cards{
+                display: grid;
+                grid-template-columns: repeat(4,1fr );
+                gap: 32px;
+                .category__card{
+                    transition: 0.3s;
+                    width: 296px;
+                    height: 228px;
+                    border: 1px solid $secondary-light-color;
+                    padding: 32px;
+                    .img__wrapper{
+                        background-color: $light-yellow;
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    h3{
+                        @include font("dark", 28px, 700, 40px, -1px);
+                        margin: 16px 0 4px;
+                    }
+                    p{
+                        width: 232px;
+                        @include font("secondary", 16px, 400, 28px, -spacing)
+                    }
+                }
+                .category__card:hover{
+                    background-color: $warning-light-color;
+                    border: none;
+                }
+            }
+        }
+    }
+    .started{
+        margin-bottom: 128px;
+        .started__wrapper{
+            position: relative;
+            .started-info{
+                position: absolute;
+                width: 706px;
+                height: 584px;
+                padding: 80px;
+                right: 0;
+                bottom: 4px;
+                background-color: #fff;
+                strong{
+                    @include font("dark", 16px, 600, 20px, 3px)
+                }
+                h2{
+                    @include font("dark", 48px, 700, 64px, -2px);
+                    margin: 24px 0 16px;
+                }
+                p{
+                    @include font("secondary", 16px, 400, 28px, -spacing);
+                    margin-bottom: 32px;
+                }
+                .btn{
+                    padding: 16px 48px;
+                    background-color: $warning-light-color;
+                }
+            }
+        }
+    }
+    .authors{
+        margin-bottom: 108px;
+        .author__wrapper{
+           .author-title{
+            h2{
+                @include font("dark", 36px, 700, 48px, -spacing);
+                text-align: center;
+                margin-bottom: 48px;
+            }
+           }
+           .author__cards{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            .author__card{
+                width: 296px;
+                height: 324px;
+                display: flex;
+                background-color: $gray-light;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: 0.3s;
+                img{
+                    margin-bottom: 20px;
+                }
+                h3{
+                    @include font("dark", 28px, 700, 40px, -1px)
+                }
+                p{
+                    @include font("secondary", 14px, 400, 20px, -spacing)
+                }
+                .socials{
+                    margin-top: 20px;
+                    display: flex;
+                    gap: 16px;
+                }
+            }
+            .author__card:hover{
+                background-color: lightyellow;
+            }
+           }
+        }
+    }
+    .partners{
+        margin-bottom: 96px;
+        .partners__wrapper{
+            .partners__img{
+                display: flex;
+                gap: 86px;
+            }
+        }
+    }
+    .testimonials{
+
+        .testimonials__wrapper{
+            background-color: $light-yellow;
+            padding: 92px 112px;
+            display: flex;
+            gap: 96px;
+            .testimonial__title{
+                width: 349px;
+                height: 200px;
+                margin: 12px 0 16px;
+                strong{
+                    @include font("dark", 16px, 600, 20px, 3px);
+                }
+                h2{
+                    @include font("dark", 36px, 700, 48px, -2px);
+                    width: 345px;
+                }
+                p{
+
+                    @include font("secondary", 16px, 400, 28px, -spacing);
+                    width: 349px;
+                }
+            }
+            .line{
+                height: 310px;
+                width: 1px;
+                background-color: $main-dark-color;
+            }
+            .testimonials__paragraph{
+                .paragraph{
+                    width: 450px;
+                    @include font("dark", 24px, 700, 32px, -spacing);
+                    margin-bottom: 121px;
+                }
+                .user{
+                    display: flex;
+                    gap: 16px;
+                    h3{
+                        @include font("dark", 24px, 700, 32px, -spacing)
+                    }
+                    p{
+                        @include font("secondary", 16px, 400, 28px, -spacing)
+                    }
                 }
             }
         }
